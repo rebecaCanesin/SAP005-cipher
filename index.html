@@ -8,15 +8,17 @@
   <body>
     <div id="root">
       <h1>Nome do site</h1>
+      
     </div>
 
-    <div>
-      <div>
-        descrição
+    <div class="container">
+      <div class="box">
+        <textarea name="" id="description" cols="30" rows="10" readonly>Aqui entra o texto de apresentação do site. Explicando do que se trata esse site e o que ele faz.</textarea>
       </div>
 
-      <div>
+      <div class="box">
         imagem
+        <img src="/src/images/images4.jpeg">
       </div>
        
     </div>
@@ -26,25 +28,34 @@
     </div>
 
     <div class="container">
-      <div class="slidecontainer">
-        <h4 class="titulos">Botão de deslocamento</h4>
+      
+
+        
+      <div class="box slidecontainer">
         <input type="range" id="barraOffset" min="1" max="26" value="3" class="slider" oninput="valorOffset.value=value" onchange="valorOffset.value=value" orient="vertical">
         <input type="text" id="valorOffset" value="3" readonly>
       </div>
+        
+        
+        
+      <div class="box">
+          <textarea name="textarea" rows="10" cols="50" placeholder="Escreva seu texto aqui"></textarea>
+          <textarea name="textareaSaida" rows="10" cols="50" readonly></textarea>
+            <!--<input type="text" id="textoEntrada" class="caixaTexto">
+            <input type="text" id="textoSaida" class="caixaTexto" readonly>-->
+      </div>
+        
     
-      <div>
-        <h3>caixa de entrada de texto</h3>
-        <textarea name="textarea" rows="10" cols="50" placeholder="Escreva seu texto aqui"></textarea>
-        <textarea name="textareaSaida" rows="10" cols="50" readonly></textarea>
-        <!--<input type="text" id="textoEntrada" class="caixaTexto">
-        <input type="text" id="textoSaida" class="caixaTexto" readonly>-->
-      </div>
-      <div>
+        
+      <div class="box">
         <button name="button" id="botaoCifrar">CIFRAR TEXTO</button>
-      </div>
-      <div>
         <button name="button" id="botaoDecifrar">DECIFRAR TEXTO</button>
+        <button name="button" id="botaoCopiar">COPIAR TEXTO</button>
+
       </div>
+        
+      
+      
     </div>
 
     <div>
