@@ -1,10 +1,15 @@
 #barraOffset{
-    width: 175px;
+    /* width: 175px;
     height: 10px;
     padding: 0 5px;
-    background: content-box;
-    
+    background: content-box;*/
+  box-sizing: border-box;
+  height: 160px;
+  border-radius: 5px;
+
+
 }
+
 #valorOffset{
     width: 100px;
     height: 90px;
@@ -17,17 +22,19 @@
   font-weight: bold;
   border: none;
   border-radius: 50%;
-  background-image: url("/home/rebeca/Documentos/SAP005-cipher/src/imagens/Waddles.jpeg");
+  background-image: url("/home/rebeca/Documentos/SAP005-cipher/src/images/Waddles.jpeg");
   background-size: 100%;
   background-position: center;
 }
 
 .slidecontainer{
-width: 100%;
+width: 100px;
+height: auto;
 padding: 10px 10px;
 margin: 5px 5px;
 position: relative;
 background-color: rgb(50, 205, 192);
+display: inline-grid;
 }
 
 .titulos{
@@ -36,4 +43,39 @@ background-color: rgb(50, 205, 192);
     font-style: normal;
     font-weight: normal;
     color: blue;
+}
+
+.container{
+    width: 100%;
+padding: 10px 10px;
+margin: 5px 5px;
+position: relative;
+background-color: rgb(112, 205, 50);
+display: inline-block;
+}
+#botaoCifrar{
+    size: ;
+    font-style: ;
+    font-family: cursive;
+    font-size: large;
+    color: rgb(0, 0, 0);
+    background-color:;
+}
+
+#botaoDecifrar{
+    size: ;
+    font-style: ;
+    font-family: cursive;
+    font-size: large;
+    color: rgb(0, 0, 0);
+    background-color:;
+}
+
+textarea{
+    resize: none;
+    display: inline;
+    background-color: lightcoral;
+    border-radius: 15px;
+    border-style: dotted;
+    
 }
