@@ -1,81 +1,135 @@
+body{
+    /*background-color: #daa520;*/
+    background-color: #b8860b;
+}
+
+
 #barraOffset{
     /* width: 175px;
     height: 10px;
     padding: 0 5px;
-    background: content-box;*/
-  box-sizing: border-box;
+    background: content-box;
+  box-sizing: border-box;*/
   height: 160px;
   border-radius: 5px;
-
+  margin: 15px;
+  padding: 10px;
+  vertical-align: top;
+  
 
 }
 
 #valorOffset{
-    width: 100px;
-    height: 90px;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  position: relative;
-  text-align: right;
+  width: 45px;
+  height: 30px;
+  padding: 4px;
+  margin: 8px;
+  text-align: center;
   color: rgb(4, 92, 92);
   font-weight: bold;
   border: none;
   border-radius: 50%;
-  background-image: url("/home/rebeca/Documentos/SAP005-cipher/src/images/Waddles.jpeg");
+  /*background-image: url("/home/rebeca/Documentos/SAP005-cipher/src/images/Waddles.jpeg");
   background-size: 100%;
-  background-position: center;
+  background-position: center;*/
+  background-color: lightblue;
+ 
 }
 
 .slidecontainer{
-width: 100px;
-height: auto;
+display: inline-grid;
+width: 85px;
+height: 400px;
 padding: 10px 10px;
+padding-left: 30px;
 margin: 5px 5px;
 position: relative;
-background-color: rgb(50, 205, 192);
-display: inline-grid;
+/*background-color: rgb(50, 205, 192);*/
 }
 
-.titulos{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: medium;
-    font-style: normal;
-    font-weight: normal;
-    color: blue;
-}
 
 .container{
     width: 100%;
-padding: 10px 10px;
-margin: 5px 5px;
-position: relative;
-background-color: rgb(112, 205, 50);
-display: inline-block;
+padding: 15px;
+margin: 15px;
+position: center;
+} 
+
+
+.box{
+    display: inline-block;
+    vertical-align: top;
+    
 }
+
 #botaoCifrar{
-    size: ;
-    font-style: ;
-    font-family: cursive;
-    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: auto;
     color: rgb(0, 0, 0);
     background-color:;
+    display: block;
+    width: 200px;
+    height: 70px;
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+    
+
 }
 
 #botaoDecifrar{
-    size: ;
-    font-style: ;
-    font-family: cursive;
-    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: auto;
     color: rgb(0, 0, 0);
     background-color:;
+    display: block;
+    width: 200px;
+    height: 70px;
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+#botaoCopiar{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: auto;
+    color: rgb(0, 0, 0);
+    background-color:;
+    display: block;
+    width: 200px;
+    height: 70px;
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+    vertical-align: bottom;
 }
 
 textarea{
+    display: block;
     resize: none;
-    display: inline;
-    background-color: lightcoral;
+    background-color: rgb(226, 169, 45);
     border-radius: 15px;
-    border-style: dotted;
+    border-style: solid;
+    width: 400px
+    height: 300px;
+    padding: 15px;
+    margin: 15px;
+    position: relative;
+    vertical-align: top;
     
 }
+
+#description{
+    display: block;
+    resize: none;
+    background-color: lightyellow;
+    border-radius: 15px;
+    border-style: solid;
+    width: 300px
+    height: 100px;
+    padding: 15px;
+    margin: 15px;
+    position: relative;
+    vertical-align: top;
+}
+
