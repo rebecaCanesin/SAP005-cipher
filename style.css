@@ -1,6 +1,8 @@
 body{
     /*background-color: #daa520;*/
     background-color: #b8860b;
+    margin: 20px;
+    padding: 20px;
 }
 
 
@@ -53,6 +55,7 @@ position: relative;
 padding: 15px;
 margin: 15px;
 position: center;
+align-items: center;
 } 
 
 
@@ -91,9 +94,9 @@ position: center;
 }
 
 #botaoCopiar{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /*
     font-size: auto;
-    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);*/
     background-color:;
     display: block;
     width: 200px;
@@ -101,13 +104,14 @@ position: center;
     margin: 15px;
     padding: 10px;
     text-align: center;
-    vertical-align: bottom;
+    
+    
 }
 
 textarea{
     display: block;
     resize: none;
-    background-color: rgb(226, 169, 45);
+    background-color: #a5b18f;
     border-radius: 15px;
     border-style: solid;
     width: 400px
@@ -125,7 +129,7 @@ textarea{
     background-color: lightyellow;
     border-radius: 15px;
     border-style: solid;
-    width: 300px
+    width: 500px
     height: 100px;
     padding: 15px;
     margin: 15px;
@@ -133,3 +137,27 @@ textarea{
     vertical-align: top;
 }
 
+.titulo{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 70pt;
+    font-style: oblique;
+    font-kerning: auto;
+    text-align: center;
+    color: rgb(59, 78, 19);
+    text-shadow: rgb(20, 27, 6) 0.1em 0.1em 0.2em;
+    width: auto;
+    height: 45px;
+
+    
+}
+
+hr{
+    color: rgb(78, 39, 11);
+    width: 100%;
+}
+
+#root{
+    padding: 15px;
+    margin: 5px;
+    border: none;
+}
