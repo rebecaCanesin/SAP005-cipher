@@ -1,64 +1,64 @@
-//import cipher from './cipher.js';
+// import cipher from './cipher.js';
 
-//console.log(cipher);
+//  console.log(cipher);
 
+const tamAlfabeto = Number(26);
 
+let textoCodigoASC;
+let saidaTexto ="";
+let offset = Number(document.getElementById("barraOffset").value);
+let entradaTexto; 
+let entradaMaiuscula;
+let tamTexto;
 
 const botaoCifrar = document.getElementById("botaoCifrar");
-botaoCifrar.addEventListener("click", encode)
+botaoCifrar.addEventListener("click", encode);
 
 
-  
-
-function encode( entradaMaiuscula,offset){
-   const tamAlfabeto = 26;
-   let entradaTexto = document.getElementById("textoEntrada").value; 
-   offset = document.getElementById("valorOffset").value;
-   entradaMaiuscula = entradaTexto.toUpperCase();
-   let tamTexto = entradaMaiuscula.length;
-   let textoCodigoASC;
-   let saidaTexto;
-
-   for (let contador=0; contador < tamTexto; contador++){
-
-         textoCodigoASC = entradaMaiuscula.charCodeAt(contador); 
-       
-      if (textoCodigoASC >= 65 && textoCodigoASC <=90) {
-
-         saidaTexto = String.fromCharCode(((textoCodigoASC + offset - 65) % tamAlfabeto) + textoCodigoASC);
-         
-      }
-      document.getElementById("textoSaida").innerHTML= saidaTexto.value; 
-
-   }
-   
-}
-   
-
-
-
-//const botaoDecifrar = document.getElementById("botaoDecifrar");
-//botaoDecifrar.addEventListener("click", decode());
-
-
-//function decode( entradaMaiuscula,offset){
-
-   //let tamTexto = entradaMaiuscula.length;
-   
-  // for (let contador=0; contador < tamTexto; contador++){
-
-   // textoCodigoASC = entradaMaiuscula.charCodeAt(contador); 
-       
-     // if (textoCodigoASC >= 65 && textoCodigoASC <=90) {
-
-    //     saidaTexto = String.fromCharCode(((textoCodigoASC - offset - 65) % tamAlfabeto) + textoCodigoASC);
-
-    //  }
+   function encode(){
       
-  // }
+      entradaTexto = document.getElementById("textoEntrada").value;
+      entradaMaiuscula = entradaTexto.toUpperCase();
+      tamTexto = Number(entradaMaiuscula.length);
+      
+      for (let contador=0; contador < tamTexto; contador++){
+     
+         textoCodigoASC = entradaMaiuscula.charCodeAt(contador); 
+        
+         saidaTexto += String.fromCharCode(((textoCodigoASC + offset - 65) % tamAlfabeto) + 65);
+         document.getElementById("textoSaida").innerHTML= saidaTexto;
+         console.log(saidaTexto);
+         
+      
+           
+      }
+         
+   //document.getElementById("textoSaida")
+   }
 
- //  document.getElementById("textoSaida").innerHTML= saidaTexto.value; 
-//}
+
+
+const botaoDecifrar = document.getElementById("botaoDecifrar");
+botaoDecifrar.addEventListener("click", decode);
+
+
+   function decode(){
+   
+      entradaTexto = document.getElementById("textoEntrada").value; 
+      entradaMaiuscula = entradaTexto.toUpperCase();
+      tamTexto = Number(entradaMaiuscula.length);
+   
+    for (let contador=0; contador < tamTexto; contador++){
+
+       textoCodigoASC = entradaMaiuscula.charCodeAt(contador); 
+       
+        saidaTexto += String.fromCharCode((((textoCodigoASC - offset - 65) % tamAlfabeto)*-1) + 65);
+        document.getElementById("textoSaida").innerHTML= saidaTexto; 
+      
+       }
+
+       
+   }
    
     
 
