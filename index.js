@@ -25,14 +25,34 @@ botaoCifrar.addEventListener("click", encode);
       for (let contador=0; contador < tamTexto; contador++){
      
          textoCodigoASC = entradaMaiuscula.charCodeAt(contador); 
+         
+
+         if (textoCodigoASC >=65 && textoCodigoASC <=90){
+
+            saidaTexto += String.fromCharCode(((textoCodigoASC + offset - 65) % tamAlfabeto) + 65);
+          }
+          
+         //  else if (textoCodigoASC == 32){
+         //     saidaTexto += String.fromCharCode(textoCodigoASC=32);
+
+         //  }
+          
+          else{
+            
+            saidaTexto += entradaMaiuscula.charAt(contador);
+            //saidaTexto = document.getElementById("textoSaida").innerHTML = ("Erro! Use somente letras na sua mensagem.");
+            //console.log("erroooooooooo!");
+          }
+           
+         
         
-         saidaTexto += String.fromCharCode(((textoCodigoASC + offset - 65) % tamAlfabeto) + 65);
-         document.getElementById("textoSaida").innerHTML= saidaTexto;
-         console.log(saidaTexto);
+         
+         
          
       }
-         return saidaTexto;
-   //document.getElementById("textoSaida")
+      document.getElementById("textoSaida").innerHTML = saidaTexto;
+      console.log(saidaTexto);  
+      return saidaTexto;
    }
 
 
@@ -55,18 +75,20 @@ botaoDecifrar.addEventListener("click", decode);
 
        if (textoCodigoASC >=65 && textoCodigoASC <=90){
 
-         saidaTexto += String.fromCharCode((((textoCodigoASC - offset - 65) % tamAlfabeto)*-1) + 65);
+         saidaTexto += String.fromCharCode ((((textoCodigoASC + (tamAlfabeto - offset)% tamAlfabeto) - 65) % tamAlfabeto) +65);
        }
-       if (textoCodigoACSC == 32) {
-         saidaTexto = saidaTexto.replace(32, " ");
-          
-       }
+       
+       else if (textoCodigoASC == 32){
+         saidaTexto += String.fromCharCode(textoCodigoASC=32);
+
+      }
+
        else {
-         document.getElementById("textoSaida").innerHTML = "Erro! Use somente letras na sua mensagem";
+         saidaTexto = document.getElementById("textoSaida").innerHTML = ("Erro! Use somente letras na sua mensagem.");
        }
         
         
-       }
+         }
       
       document.getElementById("textoSaida").innerHTML = saidaTexto; 
       console.log(saidaTexto);
