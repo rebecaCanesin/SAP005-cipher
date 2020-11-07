@@ -32,7 +32,7 @@ botaoCopiar.addEventListener("click", copiarTexto);
 
    function copiarTexto() {
       let  copia = document.getElementById("textoSaida").value; 
-      document.execCommand(copia).copy;
+      navigator.clipboard.writeText(copia);
    }
 
    console.log(cipher);

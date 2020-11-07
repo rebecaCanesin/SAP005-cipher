@@ -2,77 +2,54 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
+    <title>CODEX FALLS</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root">
-      <h1 class="titulo">CODEX FALLS</h1>
-      <hr>
+    <div id="root" class="container">
+      <a href="https://fontmeme.com/fontes/fonte-gravity-falls/"><img src="https://fontmeme.com/permalink/201107/e5a917b88000f007f8a91412d8096ab4.png" alt="fonte-gravity-falls" border="0"></a>
     </div>
 
     <div class="container">
       <div class="box">
         <textarea name="" id="description" cols="80" rows="8" readonly>
-          Bem-vindo ao meu site de codificação de mensagens. Criei essa ferramenta com meu parceiro de trabalho para nos comunicarmos e nossos planos não caissem em mãos erradas. 
-          Agora estou reativando essa ferramenta para poder ajudar outros estudiosos como eu. E também para ensinar sobre criptografia para meus sobrinhos.
+          Olá, eu sou Stanford Pines. Bem-vindo ao meu site de codificação de mensagens. Criei essa ferramenta com meu parceiro de trabalho para nos comunicarmos. 
+          Estou reativando ele para poder ajudar outros estudiosos como eu. E também para ensinar sobre criptografia para meus sobrinhos.
           Use essa ferramenta a vontade.
         </textarea>
       </div>
 
       <div class="box">
-      <!--<img src="home/rebeca/Documentos/Laboratoria/SAP005-cipher/src/images/images4.jpeg" alt="" height="90" width="85">-->
+        <img src="https://pm1.narvii.com/6299/bd851cc3615b00e3110121f464dd8b289f7b64f5_128.jpg" alt="" height="150" width="95">
       </div>
     </div>
 
-    <div>
-      título
-    </div>
-
     <div class="container">
-      
-
-        
       <div class="box slidecontainer">
+        <p>Escolha uma chave</p>
         <input type="range" id="barraOffset" min="1" max="40" value="3" class="slider" oninput="valorOffset.value=value" 
         onchange="valorOffset.value=value" orient="vertical" aria-orientation="vertical">
         <input type="text" id="valorOffset" value="3" readonly>
       </div>
         
-        
-        
       <div class="box">
-          <textarea id="textoEntrada" name="textarea" rows="10" cols="50" placeholder="Escreva seu texto aqui"></textarea>
-          <textarea id="textoSaida" name="textareaSaida" rows="10" cols="50" readonly></textarea>
-            <!--<input type="text" id="textoEntrada" class="caixaTexto">
-            <input type="text" id="textoSaida" class="caixaTexto" readonly>-->
+        <textarea id="textoEntrada" name="textarea" rows="10" cols="50" placeholder="Escreva seu texto aqui"></textarea>
+        <textarea id="textoSaida" name="textareaSaida" rows="10" cols="50" placeholder="Seu texto final aparece aqui" readonly></textarea>
       </div>
-        
-    
-        
+         
       <div class="box">
         <button name="button" id="botaoCifrar" >CIFRAR TEXTO</button>
         <button name="button" id="botaoDecifrar">DECIFRAR TEXTO</button>
         <button name="button" id="botaoCopiar">COPIAR RESULTADO</button>
-
-      </div>
-        
-      
-      
-    </div>
-
-    <div>
-      <div class="box">
-        <textarea name="" id="" cols="80" rows="8" readonly>Aqui entra o texto do anuncio para fazer uma brincadeira no site</textarea>
-      </div>
-
-      <div class="box">
-      <!--<img src="" alt="" height="90" width="85">-->
       </div>
     </div>
+    
+    <div class="container">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_682089-MLB28554247000_112018-O.webp">
+    </div> 
 
     <footer>
-      Desenvolvido por
+      Desenvolvido por <a href="https://github.com/rebecaCanesin">Stanford Pines e Bill Cipher</a> - 1981.
     </footer>
     
     <script src="index.js" type="module"></script>
