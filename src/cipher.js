@@ -1,14 +1,21 @@
 const cipher = {
 
     encode: function (offset, entradaMaiuscula) {
-        entradaMaiuscula;
-        offset;
-        let tamTexto = Number(entradaMaiuscula.length);
-        const tamAlfabeto = Number(26);
-        let textoCodigoASC;
-        let saidaTexto ="";
+
+        if ( offset==null || offset=="" || offset ==0 || entradaMaiuscula==null || entradaMaiuscula=="") {
+            throw new TypeError ('parametros da função errados', "cipher.js", 6);  
+        } 
+
+        else{
+
+            entradaMaiuscula;
+            offset;
+            let tamTexto = Number(entradaMaiuscula.length);
+            const tamAlfabeto = Number(26);
+            let textoCodigoASC;
+            let saidaTexto ="";
       
-        for (let contador=0; contador < tamTexto; contador++){
+            for (let contador=0; contador < tamTexto; contador++){
      
             textoCodigoASC = entradaMaiuscula.charCodeAt(contador); 
 
@@ -21,33 +28,47 @@ const cipher = {
            
               saidaTexto += entradaMaiuscula.charAt(contador);  
             }
+
+
+            }
+            return saidaTexto;
         }
-        return saidaTexto;
+    
     },
  
 
     decode: function (offset, entradaMaiuscula){
-        entradaMaiuscula;
-        offset;
-        let tamTexto = Number(entradaMaiuscula.length);
-        const tamAlfabeto = Number(26);
-        let textoCodigoASC;
-        let saidaTexto ="";
 
-        for (let contador=0; contador < tamTexto; contador++){
+        if ( offset==null || offset=="" || offset ==0 || entradaMaiuscula==null || entradaMaiuscula=="") {
+            throw new TypeError ('parametros da função errados', "cipher.js", 43);  
+        } 
 
-            textoCodigoASC = entradaMaiuscula.charCodeAt(contador); 
+        else{
+
+            entradaMaiuscula;
+            offset;
+            let tamTexto = Number(entradaMaiuscula.length);
+            const tamAlfabeto = Number(26);
+            let textoCodigoASC;
+            let saidaTexto ="";
+            let novoOffset = Number(Math.abs(tamAlfabeto - offset %tamAlfabeto));
+            for (let contador=0; contador < tamTexto; contador++){
+
+                textoCodigoASC = entradaMaiuscula.charCodeAt(contador); 
+            
  
-            if (textoCodigoASC >=65 && textoCodigoASC <=90){
+                if (textoCodigoASC >=65 && textoCodigoASC <=90){
  
-                saidaTexto += String.fromCharCode ((((textoCodigoASC + (tamAlfabeto - offset)% tamAlfabeto) - 65) % tamAlfabeto) +65);
-            }
+                    saidaTexto += String.fromCharCode (((textoCodigoASC + novoOffset - 65) % tamAlfabeto) +65);
+                }
 
-            else {
-                saidaTexto += entradaMaiuscula.charAt(contador);
+                else {
+                    saidaTexto += entradaMaiuscula.charAt(contador);
+                }
             }
+            return saidaTexto;
         }
-        return saidaTexto;
+        
     }
 
 }
